@@ -8,3 +8,5 @@ php -S localhost:8000
 
 # About
 It's a simple form to apply the use in the PHP class.
+
+![Preview](image.png)
