@@ -2,25 +2,29 @@
 
 include_once 'funcionario.php';
 
-$base_url = "127.0.0.1/php-oop";
-
 $codigo = $_POST['codigo'];
 $nome = $_POST['nome'];
-$nascimento = $_POST['nascimento'];
+$nascimentoString = $_POST['calendario'];
 $salario = $_POST['salario'];
+
+list($day, $month, $year) = explode('/', $nascimentoString);
+
+$nascimentoInt = (int) $day . $month . $year;
 
 $funcionario = new Funcionario();
 
 $funcionario->setCodigo($codigo);
 $funcionario->nome = $nome;
-$funcionario->setNascimento($nascimento);
+$funcionario->setNascimento($nascimentoInt);
 $funcionario->setSalario($salario);
+
+session_start();
+$_SESSION['funcionario'] = $funcionario;
 
 function redirect($url, $statusCode = 303)
 {
-    header('Location: ' . $url, true, $statusCode);
-    die();
+    header('Location: ' . $url, $statusCode);
 }
 
-redirect($base_url, 201);
+redirect("/", 201);
 ?>

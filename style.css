@@ -1,7 +1,23 @@
-body,
-input[type=text]{
+body {
 	color: #212121;
-	font-family: verdana, arial, sans-serif;	
+	font-family: verdana, arial, sans-serif;
+  background-color: #f8f8f8;
+}
+
+
+.container {
+  display: flex;
+}
+
+main {
+	padding: 0 5%;
+  flex-grow: 1;
+}
+
+aside.list {
+  width: 20%;
+  border-radius: 20px;
+  background-color: #cdcdcd;
 }
 
 h1{font-size: 1.5em}
@@ -16,15 +32,55 @@ input[type=text], input[type=number]{
 input[type=submit] {
 	border: 1px solid #CCC;
 	border-radius: 3px;
-	padding: 10px 16px;
+	padding: 10px 10px;
 	font-size: 1em;
 	font-weight: 600;
-}
-main {
-	padding: 0 10%;
+  width: 30%;
+  background-color: #0284c7;
+  color: #edebeb;
 }
 
-#form {
+.form {
 	display: flex;
 	flex-direction: column;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+.req {
+  color: red;
+}
+
+ul {
+  list-style-type: none;
+  padding: 10px;
+}
+
+ul.body-list h2 {
+  font-weight: bold;
+  padding: 0 0 28px 0;
+  text-align: center;
+}
+
+ul.body-list li {
+  padding: 10px;
+  color: #edebeb;
+}
+
+ul.body-list li:nth-child(-n + 2) {
+  border-radius: 5px 5px 0 0;
+}
+
+ul.body-list li:last-child {
+  border-radius: 0 0 5px 5px;
+}
+
+ul.body-list li:nth-child(even) {
+  background-color: #8f8f8f;
+}
+
+ul.body-list li:nth-child(odd) {
+  background-color: #6f6f6f;
 }

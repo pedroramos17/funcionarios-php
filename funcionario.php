@@ -29,7 +29,7 @@ class Funcionario
         return $this->codigo;
     }
 
-    function setNascimento(string $nascimento)
+    function setNascimento(int $nascimento)
     {
         if (is_numeric($nascimento) && ($nascimento > 0)) {
             $this->nascimento = $nascimento;
