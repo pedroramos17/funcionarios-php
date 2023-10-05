@@ -1,24 +1,3 @@
-<?php
-include_once 'funcionario.php';
-include_once 'estagiario.php';
-
-$pedro = new Funcionario();
-
-$pedro->setSalario(834);
-
-echo 'Salário: R$' . $pedro->getSalario() . "<br>";
-
-$pedrinho = new Estagiario();
-
-$pedrinho->setSalario(234);
-
-echo 'O salário de Pedrinho é R$:' . $pedrinho->getSalario()
-    . "<br>";
-
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
