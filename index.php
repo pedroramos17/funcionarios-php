@@ -36,8 +36,8 @@
     </main>
 
     <aside class="list">
+      <h2>Último cadastro adicionado</h2>
       <ul class="body-list">
-        <h2>Último cadastro adicionado</h2>
         <?php
         foreach ($_SESSION['funcionario'] as $key => $value) {
           echo "<li>$value</li>";

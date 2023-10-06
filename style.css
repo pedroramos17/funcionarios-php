@@ -55,12 +55,12 @@ input {
 
 ul {
   list-style-type: none;
-  padding: 10px;
+  padding: 10px 10px 0 10px;
 }
 
-ul.body-list h2 {
+.list h2 {
   font-weight: bold;
-  padding: 0 0 28px 0;
+  padding: 0 0 10px 0;
   text-align: center;
 }
 
@@ -69,7 +69,7 @@ ul.body-list li {
   color: #edebeb;
 }
 
-ul.body-list li:nth-child(-n + 2) {
+ul.body-list li:first-child {
   border-radius: 5px 5px 0 0;
 }
 
